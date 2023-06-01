@@ -3,8 +3,14 @@ import os
 import pyfiglet
 import zipfile
 
+
 baner_text = pyfiglet.figlet_format("Program do kopiowania")
 print(baner_text)
+
+
+a = input("\nPodaj folder zródłowy: ")
+b = input("\nPodaj folder docelowy: ")
+
 
 def kopia_zapasowa(src_folder, dest_folder):
     try:
@@ -28,7 +34,7 @@ def kopia_zapasowa(src_folder, dest_folder):
         print(f"Błąd systemu operacyjnego: {e}")
 
 
-src_folder = r"C:\test_do_kopi"
-dest_folder = r"C:\kopia"
+src_folder = a
+dest_folder = b
 
 kopia_zapasowa(src_folder, dest_folder)
